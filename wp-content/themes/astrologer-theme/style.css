@@ -2010,7 +2010,8 @@ body.modal-open {
   line-height: 1.5;
 }
 
-.booking-modal-form {
+.booking-modal-form,
+.astrologer-consult-form {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
@@ -2022,13 +2023,15 @@ body.modal-open {
   }
 }
 
-.booking-modal-form .form-group {
+.booking-modal-form .form-group,
+.astrologer-consult-form .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.booking-modal-form label {
+.booking-modal-form label,
+.astrologer-consult-form label {
   color: var(--text-gold);
   font-size: 0.84rem;
   font-weight: 600;
@@ -2036,7 +2039,10 @@ body.modal-open {
 
 .booking-modal-form input,
 .booking-modal-form select,
-.booking-modal-form textarea {
+.booking-modal-form textarea,
+.astrologer-consult-form input,
+.astrologer-consult-form select,
+.astrologer-consult-form textarea {
   background: rgba(7, 6, 20, 0.7);
   border: 1px solid rgba(229, 184, 73, 0.2);
   border-radius: 9px;
@@ -2047,7 +2053,8 @@ body.modal-open {
   transition: all 0.3s ease;
 }
 
-.booking-modal-form select {
+.booking-modal-form select,
+.astrologer-consult-form select {
   appearance: none;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23E5B849' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
@@ -2056,7 +2063,8 @@ body.modal-open {
   padding-right: 2.5rem;
 }
 
-.booking-modal-form select option {
+.booking-modal-form select option,
+.astrologer-consult-form select option {
   background: #0E0B1F;
   color: #FFFFFF;
   padding: 0.5rem;
@@ -2064,14 +2072,19 @@ body.modal-open {
 
 .booking-modal-form input:focus,
 .booking-modal-form select:focus,
-.booking-modal-form textarea:focus {
+.booking-modal-form textarea:focus,
+.astrologer-consult-form input:focus,
+.astrologer-consult-form select:focus,
+.astrologer-consult-form textarea:focus {
   outline: none;
   border-color: var(--primary-gold);
   box-shadow: 0 0 12px rgba(229, 184, 73, 0.3);
 }
 
 .booking-modal-form input::placeholder,
-.booking-modal-form textarea::placeholder {
+.booking-modal-form textarea::placeholder,
+.astrologer-consult-form input::placeholder,
+.astrologer-consult-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.35);
 }
 

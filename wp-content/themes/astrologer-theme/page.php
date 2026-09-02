@@ -79,22 +79,52 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 						Direct private consultation with Astrologer <?php echo esc_html( $astro_name ); ?>
 					</p>
 
-					<form id="sidebarConsultForm">
-						<div class="form-group" style="margin-bottom: 1rem;">
-							<label style="font-size: 0.85rem;">Full Name</label>
-							<input type="text" class="form-input" placeholder="Your Name" required style="padding: 0.7rem 1rem;">
+					<form id="sidebarConsultForm" class="astrologer-consult-form" action="#" method="POST">
+						<div class="form-group">
+							<label for="sidebarFullName">Full Name</label>
+							<input type="text" id="sidebarFullName" name="full_name" placeholder="Your full name" required>
 						</div>
-						<div class="form-group" style="margin-bottom: 1rem;">
-							<label style="font-size: 0.85rem;">Phone / WhatsApp</label>
-							<input type="tel" class="form-input" placeholder="+61 4XX XXX XXX" required style="padding: 0.7rem 1rem;">
+
+						<div class="form-group">
+							<label for="sidebarPhoneNumber">Phone Number</label>
+							<input type="tel" id="sidebarPhoneNumber" name="phone_number" placeholder="+61 400 000 000" required>
 						</div>
-						<div class="form-group" style="margin-bottom: 1.25rem;">
-							<label style="font-size: 0.85rem;">Your Location (Suburb)</label>
-							<input type="text" class="form-input" placeholder="e.g. Adelaide CBD, Prospect" required style="padding: 0.7rem 1rem;">
+
+						<div class="form-group">
+							<label for="sidebarEmailAddress">Email Address</label>
+							<input type="email" id="sidebarEmailAddress" name="email" placeholder="your@email.com" required>
 						</div>
-						<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-gold" style="width: 100%; justify-content: center; font-size: 0.9rem;">
+
+						<div class="form-group">
+							<label for="sidebarServiceRequired">Service Required</label>
+							<select id="sidebarServiceRequired" name="service_required" required>
+								<option value="" disabled selected>Select a service</option>
+								<option value="Black Magic Removal Adelaide">Black Magic Removal Adelaide</option>
+								<option value="Get Your Ex Love Back Adelaide">Get Your Ex Love Back Adelaide</option>
+								<option value="Negative Energy Removal">Negative Energy Removal</option>
+								<option value="Love Problem Solution">Love Problem Solution</option>
+								<option value="Psychic Reading Adelaide">Psychic Reading Adelaide</option>
+								<option value="Tarot Card Reading">Tarot Card Reading</option>
+								<option value="Vashikaran Specialist Adelaide">Vashikaran Specialist Adelaide</option>
+								<option value="Marriage & Relationships">Marriage & Relationships</option>
+								<option value="Spiritual Healing Adelaide">Spiritual Healing Adelaide</option>
+								<option value="Palm Reading Adelaide">Palm Reading Adelaide</option>
+								<option value="Horoscope & Kundli Reading">Horoscope & Kundli Reading</option>
+								<option value="Pooja & Hawan Services">Pooja & Hawan Services</option>
+								<option value="Career & Business Guidance">Career & Business Guidance</option>
+								<option value="Court Case & Dispute Resolution">Court Case & Dispute Resolution</option>
+								<option value="General Spiritual Consultation">General Spiritual Consultation</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="sidebarMessage">Message</label>
+							<textarea id="sidebarMessage" name="message" rows="3" placeholder="Tell us about your needs..."></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 0.5rem; font-size: 0.95rem; border-radius: 50px;">
 							<i class="fa-solid fa-paper-plane"></i> Book Consultation
-						</a>
+						</button>
 					</form>
 				</div>
 
