@@ -2,18 +2,40 @@
 /**
  * Main Index Template
  *
- * @package AstroVeda
+ * @package AstrologerTheme
  */
 
 get_header();
+$astro_phone       = get_theme_mod( 'astrologer_phone', '+61 400 000 000' );
+$astro_wa          = get_theme_mod( 'astrologer_whatsapp', '61400000000' );
+$astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 ?>
 
-<div class="container" style="padding-top: 140px; padding-bottom: 80px;">
-	<div class="section-header">
-		<h1 class="section-title font-serif">Astrology <span class="text-gold">Insights & Blog</span></h1>
-		<p class="section-desc">Celestial wisdom, horoscope news, planetary transits, and Vedic remedy guides.</p>
+<!-- BLOG ARCHIVE HERO BANNER -->
+<section class="page-hero-section">
+	<div class="container text-center" style="max-width: 900px;">
+		<div class="breadcrumbs" style="color: var(--primary-gold); font-size: 0.85rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &nbsp;»&nbsp; 
+			<span style="color: var(--primary-gold);">Blog</span>
+		</div>
+		<h1 class="font-serif text-gold" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem;">
+			Astrology <span class="text-gold">Insights &amp; Blog</span>
+		</h1>
+		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 780px; margin: 0 auto 1.5rem auto; line-height: 1.7; text-align: justify; text-justify: inter-word;">
+			Celestial wisdom, horoscope news, planetary transits, and Vedic remedy guides by Astrologer Raghu Sharma in Adelaide.
+		</p>
+		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
+				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
+			</a>
+			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
+				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+			</a>
+		</div>
 	</div>
+</section>
 
+<div class="container" style="padding-top: 3rem; padding-bottom: 80px;">
 	<div class="services-grid">
 		<?php
 		if ( have_posts() ) :
@@ -26,7 +48,7 @@ get_header();
 						</div>
 					<?php endif; ?>
 					<h2 class="font-serif" style="font-size: 1.4rem; margin-bottom: 0.75rem;">
-						<a href="<?php the_permalink(); ?>" style="color: var(--text-main); text-decoration: none;"><?php the_title(); ?></a>
+						<a href="<?php the_permalink(); ?>" class="adelaide-service-link"><?php the_title(); ?></a>
 					</h2>
 					<div style="font-size: 0.85rem; color: var(--primary-gold); margin-bottom: 1rem;">
 						<span><i class="fa-regular fa-calendar"></i> <?php echo get_the_date(); ?></span> | 

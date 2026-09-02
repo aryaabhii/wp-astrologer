@@ -29,20 +29,20 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 	<div class="container hero-content">
 		<div class="hero-text">
 			<div class="hero-badge">
-				<i class="fa-solid fa-sparkles"></i> #1 Indian Astrologer in Adelaide, South Australia
+				<i class="fa-solid fa-wand-magic-sparkles"></i> #1 Indian Astrologer in Adelaide, South Australia
 			</div>
 			<h1 class="hero-title font-serif">
 				Astrologer <span class="text-gold"><?php echo esc_html( $astro_name ); ?></span> – Adelaide
 			</h1>
 			<p class="hero-subtitle">
-				Specialised in <strong>Black Magic Removal</strong>, <strong>Get Your Ex Love Back</strong>, <strong>Psychic Reading</strong> & <strong>Vashikaran</strong> across Adelaide CBD, Prospect, Glenelg, Salisbury, and all SA suburbs.
+				Specialised in <strong>Black Magic Removal</strong>, <strong>Get Your Ex Love Back</strong>, <strong>Psychic Reading</strong> &amp; <strong>Vashikaran</strong> across Adelaide CBD, Prospect, Glenelg, Salisbury, and all SA suburbs.
 			</p>
 
 			<div class="hero-cta">
 				<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
 					<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
 				</a>
-				<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp">
+				<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
 					<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
 				</a>
 			</div>

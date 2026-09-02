@@ -2,23 +2,46 @@
 /**
  * Single Post Template
  *
- * @package AstroVeda
+ * @package AstrologerTheme
  */
 
 get_header();
+$astro_phone       = get_theme_mod( 'astrologer_phone', '+61 400 000 000' );
+$astro_wa          = get_theme_mod( 'astrologer_whatsapp', '61400000000' );
+$astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 ?>
 
-<div class="container" style="padding-top: 140px; padding-bottom: 80px; max-width: 900px;">
+<!-- SINGLE POST HERO BANNER -->
+<section class="page-hero-section">
+	<div class="container text-center" style="max-width: 900px;">
+		<div class="breadcrumbs" style="color: var(--primary-gold); font-size: 0.85rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &nbsp;»&nbsp; 
+			<a href="<?php echo home_url('/blog/'); ?>" style="color: var(--text-muted); text-decoration: none;">Blog</a> &nbsp;»&nbsp; 
+			<span style="color: var(--primary-gold);"><?php single_post_title(); ?></span>
+		</div>
+		<h1 class="font-serif text-gold" style="font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem;">
+			<?php single_post_title(); ?>
+		</h1>
+		<div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+			<span><i class="fa-regular fa-calendar text-gold"></i> <?php echo get_the_date(); ?></span> &nbsp;&bull;&nbsp; 
+			<span><i class="fa-regular fa-user text-gold"></i> By <?php the_author(); ?></span>
+		</div>
+		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
+				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
+			</a>
+			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
+				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+			</a>
+		</div>
+	</div>
+</section>
+
+<div class="container" style="padding-top: 3rem; padding-bottom: 80px; max-width: 900px;">
 	<?php
 	while ( have_posts() ) : the_post();
 		?>
-		<article class="glass-card" style="padding: 3rem;">
-			<h1 class="font-serif text-gold" style="font-size: 2.5rem; margin-bottom: 1rem;"><?php the_title(); ?></h1>
-			<div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
-				<span><i class="fa-regular fa-calendar"></i> <?php echo get_the_date(); ?></span> &bull; 
-				<span><i class="fa-regular fa-user"></i> By <?php the_author(); ?></span>
-			</div>
-
+		<article class="glass-card" style="padding: 2.5rem;">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<div style="margin-bottom: 2rem; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-gold);">
 					<?php the_post_thumbnail( 'full', array( 'style' => 'width: 100%; height: auto;' ) ); ?>
