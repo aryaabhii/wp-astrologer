@@ -295,6 +295,8 @@ h6,
   padding-bottom: 50px;
   position: relative;
   z-index: 2;
+  background: linear-gradient(180deg, rgba(7,6,20,0.95) 0%, rgba(22,18,44,0.9) 100%);
+  border-bottom: 1px solid var(--border-gold);
 }
 
 .breadcrumbs {

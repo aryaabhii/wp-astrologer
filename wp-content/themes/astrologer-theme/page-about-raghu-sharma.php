@@ -14,17 +14,25 @@ $profile_img    = get_template_directory_uri() . '/assets/images/astrologer-prof
 ?>
 
 <!-- ABOUT HERO BANNER -->
-<section class="page-hero-section section">
-	<div class="container" style="text-align: center;">
-		<div class="breadcrumbs" style="color: var(--text-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem;">
-			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &raquo; <span>About Acharya <?php echo esc_html($astro_name); ?></span>
+<section class="page-hero-section">
+	<div class="container text-center" style="max-width: 900px;">
+		<div class="breadcrumbs" style="color: var(--primary-gold); font-size: 0.85rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &nbsp;»&nbsp; <span>About Acharya <?php echo esc_html($astro_name); ?></span>
 		</div>
-		<h1 class="font-serif" style="font-size: 2.8rem; margin-bottom: 1rem; color: #FFFFFF;">
+		<h1 class="font-serif text-gold" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem;">
 			About Master <span class="text-gold">Raghu Sharma</span>
 		</h1>
-		<p style="max-width: 780px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; text-align: justify; text-justify: inter-word;">
+		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 780px; margin: 0 auto 1.5rem auto; line-height: 1.7; text-align: justify; text-justify: inter-word;">
 			Adelaide's leading Indian Vedic Astrologer, Psychic Reader, and Black Magic Removal Specialist with over 25 years of sacred lineage. Empowering thousands of individuals and families across South Australia.
 		</p>
+		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
+				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
+			</a>
+			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
+				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+			</a>
+		</div>
 	</div>
 </section>
 
