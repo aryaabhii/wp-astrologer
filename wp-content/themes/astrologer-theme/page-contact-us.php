@@ -214,43 +214,84 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 		</div>
 
 		<!-- FREQUENTLY ASKED QUESTIONS SECTION -->
-		<div style="margin-top: 5rem;">
-			<div style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem;">
-				<h2 class="font-serif text-gold" style="font-size: 2rem; margin-bottom: 0.5rem;">
-					Frequently Asked <span class="text-gold">Contact Questions</span>
-				</h2>
-				<p style="color: var(--text-muted); font-size: 0.95rem;">Everything you need to know before booking your astrological reading.</p>
+		<div style="margin-top: 5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+			<div class="section-header" style="text-align: center; margin-bottom: 1.5rem;">
+				<h2 class="section-title font-serif" style="font-size: 2rem;">Frequently Asked <span class="text-gold">Contact Questions</span></h2>
+				<p class="section-desc" style="color: var(--text-muted); font-size: 0.95rem;">Get clear answers about booking consultations, confidentiality, and appointment availability in Adelaide.</p>
 			</div>
 
-			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-				
-				<div class="glass-card" style="padding: 1.75rem; border-radius: 16px;">
-					<h4 class="font-serif text-gold" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-						<i class="fa-solid fa-lock text-gold" style="margin-right: 0.4rem;"></i> Is my consultation 100% private?
-					</h4>
-					<p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6; text-align: justify; text-justify: inter-word;">
-						Yes. Astrologer Raghu Sharma strictly adheres to a 100% client privacy pledge. Your personal information, birth details, and issues are never shared with any third party.
-					</p>
+			<!-- FAQ METRICS CHIPS -->
+			<div style="display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 2.5rem; flex-wrap: wrap;">
+				<span style="font-size: 0.85rem; background: rgba(229, 184, 73, 0.08); border: 1px solid rgba(229, 184, 73, 0.25); padding: 0.45rem 1.1rem; border-radius: 50px; color: var(--text-gold);"><i class="fa-solid fa-bolt text-gold"></i> 15-Min Response</span>
+				<span style="font-size: 0.85rem; background: rgba(229, 184, 73, 0.08); border: 1px solid rgba(229, 184, 73, 0.25); padding: 0.45rem 1.1rem; border-radius: 50px; color: var(--text-gold);"><i class="fa-solid fa-user-shield text-gold"></i> 100% Confidential</span>
+				<span style="font-size: 0.85rem; background: rgba(229, 184, 73, 0.08); border: 1px solid rgba(229, 184, 73, 0.25); padding: 0.45rem 1.1rem; border-radius: 50px; color: var(--text-gold);"><i class="fa-solid fa-award text-gold"></i> 25+ Yrs Wisdom</span>
+			</div>
+
+			<div class="faq-grid">
+				<!-- 1 -->
+				<div class="faq-item">
+					<details open>
+						<summary>
+							<span class="faq-q-title"><i class="fa-solid fa-circle-question"></i> How can I book an immediate consultation with Astrologer <?php echo esc_html( $astro_name ); ?> in Adelaide?</span>
+							<i class="fa-solid fa-chevron-down faq-arrow"></i>
+						</summary>
+						<div class="faq-answer">
+							You can book an immediate private session by calling <a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>"><?php echo esc_html( $astro_phone ); ?></a> or messaging directly on <a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" target="_blank">WhatsApp</a>. In-person consultations in Adelaide as well as private phone &amp; video readings are available.
+						</div>
+					</details>
 				</div>
 
-				<div class="glass-card" style="padding: 1.75rem; border-radius: 16px;">
-					<h4 class="font-serif text-gold" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-						<i class="fa-solid fa-phone text-gold" style="margin-right: 0.4rem;"></i> Are phone or online readings available?
-					</h4>
-					<p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6; text-align: justify; text-justify: inter-word;">
-						Yes! Phone, WhatsApp, and virtual readings are fully available for interstate and international clients who cannot visit our Adelaide office in person.
-					</p>
+				<!-- 2 -->
+				<div class="faq-item">
+					<details>
+						<summary>
+							<span class="faq-q-title"><i class="fa-solid fa-user-lock"></i> Are all consultations 100% private and confidential?</span>
+							<i class="fa-solid fa-chevron-down faq-arrow"></i>
+						</summary>
+						<div class="faq-answer">
+							Yes, absolute confidentiality is guaranteed. Your personal details, birth chart information, and consultation discussions are strictly private and never shared under any circumstances.
+						</div>
+					</details>
 				</div>
 
-				<div class="glass-card" style="padding: 1.75rem; border-radius: 16px;">
-					<h4 class="font-serif text-gold" style="font-size: 1.1rem; margin-bottom: 0.5rem;">
-						<i class="fa-solid fa-bolt text-gold" style="margin-right: 0.4rem;"></i> How quickly can I get an appointment?
-					</h4>
-					<p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6; text-align: justify; text-justify: inter-word;">
-						Same-day emergency consultations are available for urgent spiritual issues like severe black magic effects or sudden relationship breakdowns.
-					</p>
+				<!-- 3 -->
+				<div class="faq-item">
+					<details>
+						<summary>
+							<span class="faq-q-title"><i class="fa-solid fa-phone"></i> Are phone or online WhatsApp readings available if I cannot visit in person?</span>
+							<i class="fa-solid fa-chevron-down faq-arrow"></i>
+						</summary>
+						<div class="faq-answer">
+							Yes! Master Raghu Sharma provides full phone, video call, and WhatsApp consultations for clients located across South Australia, interstate, or internationally.
+						</div>
+					</details>
 				</div>
 
+				<!-- 4 -->
+				<div class="faq-item">
+					<details>
+						<summary>
+							<span class="faq-q-title"><i class="fa-solid fa-clipboard-list"></i> What details should I provide when booking a reading?</span>
+							<i class="fa-solid fa-chevron-down faq-arrow"></i>
+						</summary>
+						<div class="faq-answer">
+							Providing your full name, date of birth, exact time of birth, and place of birth allows Master Raghu Sharma to conduct an accurate Vedic Kundli analysis. If birth details are unavailable, palm reading and intuitive psychic readings are also conducted.
+						</div>
+					</details>
+				</div>
+
+				<!-- 5 -->
+				<div class="faq-item">
+					<details>
+						<summary>
+							<span class="faq-q-title"><i class="fa-solid fa-map-location-dot"></i> Which Adelaide suburbs are covered for in-person consultations?</span>
+							<i class="fa-solid fa-chevron-down faq-arrow"></i>
+						</summary>
+						<div class="faq-answer">
+							We serve clients across Adelaide CBD, Prospect, Glenelg, Salisbury, Norwood, Mawson Lakes, Marion, Port Adelaide, Burnside, Golden Grove, and surrounding South Australia regions.
+						</div>
+					</details>
+				</div>
 			</div>
 		</div>
 
