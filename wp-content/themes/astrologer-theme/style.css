@@ -1012,6 +1012,142 @@ h6,
   gap: 2rem;
 }
 
+/* Circular Home Services Grid */
+.circle-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.circle-service-card {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(35, 25, 70, 0.9), rgba(12, 10, 30, 0.95));
+  border: 2px solid rgba(229, 184, 73, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(229, 184, 73, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.8rem 1.6rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+}
+
+.circle-service-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0%, rgba(229, 184, 73, 0.15) 30%, transparent 60%);
+  animation: rotateGlow 12s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.circle-service-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.circle-service-card:hover {
+  border-color: rgba(229, 184, 73, 0.85);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 45px rgba(229, 184, 73, 0.3), inset 0 0 30px rgba(229, 184, 73, 0.2);
+}
+
+.circle-service-card .service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(229, 184, 73, 0.12);
+  border: 1.5px solid var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-gold);
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 15px rgba(229, 184, 73, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.circle-service-card:hover .service-icon {
+  transform: rotate(360deg) scale(1.1);
+  background: var(--primary-gold);
+  color: #0B081C;
+  box-shadow: 0 0 25px rgba(229, 184, 73, 0.6);
+}
+
+.circle-service-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+}
+
+.circle-service-card h3 a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.circle-service-card:hover h3 a {
+  color: var(--text-gold);
+}
+
+.circle-service-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0 0 0.75rem 0;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.circle-service-card .circle-btn {
+  font-size: 0.78rem;
+  color: var(--text-gold);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  background: rgba(229, 184, 73, 0.1);
+  border: 1px solid rgba(229, 184, 73, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+}
+
+.circle-service-card:hover .circle-btn {
+  background: var(--primary-gold);
+  color: #0B081C;
+  border-color: var(--primary-gold);
+}
+
 .service-card-header {
   display: flex;
   align-items: center;

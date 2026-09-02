@@ -149,65 +149,53 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 			</div>
 		</div>
 
-		<div class="services-grid">
+		<div class="circle-services-grid">
 			<!-- 1 -->
-			<div class="glass-card service-card">
-				<div class="service-card-header">
-					<div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-					<h3 class="font-serif"><a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none;">Black Magic Removal Adelaide</a></h3>
-				</div>
-				<p>Complete cleansing of dark spells, Kala Jadu, witchcraft, and evil eye afflictions in Adelaide homes.</p>
-				<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;"><i class="fa-solid fa-calendar-check text-gold"></i> Book Consultation</a>
+			<div class="circle-service-card">
+				<div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+				<h3 class="font-serif"><a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>">Black Magic Removal</a></h3>
+				<p>Cleansing of dark spells, Kala Jadu &amp; evil eye afflictions in Adelaide.</p>
+				<a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>" class="circle-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
 
 			<!-- 2 -->
-			<div class="glass-card service-card">
-				<div class="service-card-header">
-					<div class="service-icon"><i class="fa-solid fa-heart-circle-bolt"></i></div>
-					<h3 class="font-serif"><a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none;">Get Your Ex Love Back Adelaide</a></h3>
-				</div>
-				<p>Re-ignite lost affection and bring your ex-partner back into your life with powerful astrological remedies.</p>
-				<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;"><i class="fa-solid fa-calendar-check text-gold"></i> Book Consultation</a>
+			<div class="circle-service-card">
+				<div class="service-icon"><i class="fa-solid fa-heart-circle-bolt"></i></div>
+				<h3 class="font-serif"><a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>">Get Your Ex Love Back</a></h3>
+				<p>Re-ignite lost affection and bring your partner back with sacred remedies.</p>
+				<a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>" class="circle-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
 
 			<!-- 3 -->
-			<div class="glass-card service-card">
-				<div class="service-card-header">
-					<div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-					<h3 class="font-serif"><a href="<?php echo home_url('/negative-energy-removal-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none;">Negative Energy Removal</a></h3>
-				</div>
-				<p>Clear toxic vibrations, aura blockages, and home negativity to restore peace and prosperity.</p>
-				<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;"><i class="fa-solid fa-calendar-check text-gold"></i> Book Consultation</a>
+			<div class="circle-service-card">
+				<div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+				<h3 class="font-serif"><a href="<?php echo home_url('/negative-energy-removal-adelaide/'); ?>">Negative Energy Removal</a></h3>
+				<p>Clear toxic vibrations, aura blockages, and home negativity in SA.</p>
+				<a href="<?php echo home_url('/negative-energy-removal-adelaide/'); ?>" class="circle-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
 
 			<!-- 4 -->
-			<div class="glass-card service-card">
-				<div class="service-card-header">
-					<div class="service-icon"><i class="fa-solid fa-eye"></i></div>
-					<h3 class="font-serif"><a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none;">Psychic Reading Adelaide</a></h3>
-				</div>
-				<p>Accurate intuitive psychic readings to reveal your future path in career, love, and health.</p>
-				<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;"><i class="fa-solid fa-calendar-check text-gold"></i> Book Consultation</a>
+			<div class="circle-service-card">
+				<div class="service-icon"><i class="fa-solid fa-eye"></i></div>
+				<h3 class="font-serif"><a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>">Psychic Reading Adelaide</a></h3>
+				<p>Accurate intuitive psychic readings to reveal your future path clearly.</p>
+				<a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>" class="circle-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
 
 			<!-- 5 -->
-			<div class="glass-card service-card">
-				<div class="service-card-header">
-					<div class="service-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-					<h3 class="font-serif"><a href="<?php echo home_url('/vashikaran-specialist-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none;">Vashikaran Specialist Adelaide</a></h3>
-				</div>
-				<p>Positive, ethical Vashikaran mantras to harmonize relationship conflicts and love attraction.</p>
-				<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;"><i class="fa-solid fa-calendar-check text-gold"></i> Book Consultation</a>
+			<div class="circle-service-card">
+				<div class="service-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+				<h3 class="font-serif"><a href="<?php echo home_url('/vashikaran-specialist-adelaide/'); ?>">Vashikaran Specialist</a></h3>
+				<p>Positive, ethical Vashikaran mantras to harmonize love conflicts.</p>
+				<a href="<?php echo home_url('/vashikaran-specialist-adelaide/'); ?>" class="circle-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
 
 			<!-- 6 -->
-			<div class="glass-card service-card">
-				<div class="service-card-header">
-					<div class="service-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
-					<h3 class="font-serif"><a href="<?php echo home_url('/spiritual-healing-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none;">Spiritual Healing Adelaide</a></h3>
-				</div>
-				<p>Deep chakra alignment and emotional healing techniques to eliminate stress and anxiety.</p>
-				<a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;"><i class="fa-solid fa-calendar-check text-gold"></i> Book Consultation</a>
+			<div class="circle-service-card">
+				<div class="service-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+				<h3 class="font-serif"><a href="<?php echo home_url('/spiritual-healing-adelaide/'); ?>">Spiritual Healing</a></h3>
+				<p>Deep chakra alignment and emotional healing techniques for peace.</p>
+				<a href="<?php echo home_url('/spiritual-healing-adelaide/'); ?>" class="circle-btn">Explore <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
 		</div>
 
