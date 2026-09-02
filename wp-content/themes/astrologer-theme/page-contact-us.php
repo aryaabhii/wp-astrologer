@@ -76,53 +76,65 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 		</div>
 
 		<!-- MAIN 2-COLUMN GRID (DETAILS + FORM) -->
-		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: stretch;">
 			
 			<!-- LEFT COLUMN: CONTACT DETAILS & ASSURANCES -->
-			<div>
-				<div class="glass-card" style="padding: 2.25rem; border: 1px solid var(--border-gold); border-radius: 20px; margin-bottom: 2rem;">
-					<h2 class="font-serif text-gold" style="font-size: 1.6rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem;">
-						<i class="fa-solid fa-headset text-gold"></i> Astrologer Contact Info
-					</h2>
-					<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify; text-justify: inter-word;">
-						Astrologer <?php echo esc_html( $astro_name ); ?> offers personal, confidential consultations for clients throughout South Australia. Whether you require black magic protection, love reunion, or horoscope readings, help is just a call or message away.
-					</p>
+			<div style="display: flex; flex-direction: column;">
+				<div class="glass-card" style="padding: 2.25rem; border: 1px solid var(--border-gold); border-radius: 20px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+					<div>
+						<h2 class="font-serif text-gold" style="font-size: 1.6rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem;">
+							<i class="fa-solid fa-headset text-gold"></i> Astrologer Contact Info
+						</h2>
+						<p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify; text-justify: inter-word;">
+							Astrologer <?php echo esc_html( $astro_name ); ?> offers personal, confidential consultations for clients throughout South Australia. Whether you require black magic protection, love reunion, or horoscope readings, help is just a call or message away.
+						</p>
 
-					<div style="display: flex; flex-direction: column; gap: 1.2rem;">
-						
-						<div style="display: flex; align-items: flex-start; gap: 1rem;">
-							<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-								<i class="fa-solid fa-clock text-gold"></i>
+						<div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem;">
+							
+							<div style="display: flex; align-items: flex-start; gap: 1rem;">
+								<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+									<i class="fa-solid fa-clock text-gold"></i>
+								</div>
+								<div>
+									<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Consultation Hours</h4>
+									<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Monday – Sunday: 8:00 AM – 9:00 PM (ACST)</p>
+								</div>
 							</div>
-							<div>
-								<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Consultation Hours</h4>
-								<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Monday – Sunday: 8:00 AM – 9:00 PM (ACST)</p>
+
+							<div style="display: flex; align-items: flex-start; gap: 1rem;">
+								<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+									<i class="fa-solid fa-envelope text-gold"></i>
+								</div>
+								<div>
+									<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Email Support</h4>
+									<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;"><?php echo esc_html( $astro_email ); ?></p>
+								</div>
 							</div>
+
+							<div style="display: flex; align-items: flex-start; gap: 1rem;">
+								<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+									<i class="fa-solid fa-language text-gold"></i>
+								</div>
+								<div>
+									<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Languages Spoken</h4>
+									<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">English, Hindi, Punjabi, Gujarati &amp; South Indian Languages</p>
+								</div>
+							</div>
+
+							<div style="display: flex; align-items: flex-start; gap: 1rem;">
+								<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+									<i class="fa-solid fa-globe text-gold"></i>
+								</div>
+								<div>
+									<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Service Locations</h4>
+									<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Adelaide CBD, Prospect, Glenelg, Norwood, Salisbury, Marion &amp; all SA Suburbs.</p>
+								</div>
+							</div>
+
 						</div>
-
-						<div style="display: flex; align-items: flex-start; gap: 1rem;">
-							<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-								<i class="fa-solid fa-envelope text-gold"></i>
-							</div>
-							<div>
-								<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Email Support</h4>
-								<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;"><?php echo esc_html( $astro_email ); ?></p>
-							</div>
-						</div>
-
-						<div style="display: flex; align-items: flex-start; gap: 1rem;">
-							<div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(229, 184, 73, 0.12); border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-								<i class="fa-solid fa-globe text-gold"></i>
-							</div>
-							<div>
-								<h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.2rem;">Service Locations</h4>
-								<p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">Adelaide CBD, Prospect, Glenelg, Norwood, Salisbury, Marion, Mawson Lakes &amp; all SA Suburbs.</p>
-							</div>
-						</div>
-
 					</div>
 
-					<div style="margin-top: 1.75rem; padding: 1.2rem; background: rgba(229, 184, 73, 0.08); border-radius: 14px; border: 1px solid rgba(229, 184, 73, 0.25); display: flex; align-items: center; gap: 0.8rem;">
+					<div style="padding: 1.2rem; background: rgba(229, 184, 73, 0.08); border-radius: 14px; border: 1px solid rgba(229, 184, 73, 0.25); display: flex; align-items: center; gap: 0.8rem; margin-top: auto;">
 						<i class="fa-solid fa-shield-halved text-gold" style="font-size: 1.5rem; flex-shrink: 0;"></i>
 						<div style="font-size: 0.88rem; color: var(--text-muted);">
 							<strong style="color: #FFFFFF;">100% Confidentiality Assured:</strong> All personal details, birth charts, and consultations remain strictly private and protected.
@@ -132,8 +144,8 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 			</div>
 
 			<!-- RIGHT COLUMN: STANDARDIZED CONSULTATION FORM -->
-			<div>
-				<div class="glass-card" style="padding: 2.25rem; border: 1px solid var(--border-gold); border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
+			<div style="display: flex; flex-direction: column;">
+				<div class="glass-card" style="padding: 2.25rem; border: 1px solid var(--border-gold); border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
 					<h2 class="font-serif text-gold" style="font-size: 1.6rem; margin-bottom: 0.3rem; text-align: center;">
 						<i class="fa-solid fa-paper-plane text-gold" style="margin-right: 0.4rem;"></i> Book Private Consultation
 					</h2>

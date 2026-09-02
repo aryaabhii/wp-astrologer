@@ -158,6 +158,66 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 	</div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	document.querySelectorAll('.faq-item summary').forEach(function(summary) {
+		summary.addEventListener('click', function(e) {
+			e.preventDefault();
+			var details = summary.parentElement;
+			var answer = details.querySelector('.faq-answer');
+			
+			if (details.hasAttribute('open')) {
+				answer.style.height = answer.offsetHeight + 'px';
+				answer.style.overflow = 'hidden';
+				answer.style.transition = 'height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.35s ease';
+				
+				requestAnimationFrame(function() {
+					answer.style.height = '0px';
+					answer.style.opacity = '0';
+					answer.style.paddingTop = '0px';
+					answer.style.paddingBottom = '0px';
+				});
+				
+				setTimeout(function() {
+					details.removeAttribute('open');
+					answer.style.removeProperty('height');
+					answer.style.removeProperty('overflow');
+					answer.style.removeProperty('transition');
+					answer.style.removeProperty('opacity');
+					answer.style.removeProperty('padding-top');
+					answer.style.removeProperty('padding-bottom');
+				}, 350);
+			} else {
+				details.setAttribute('open', '');
+				var autoHeight = answer.offsetHeight;
+				answer.style.height = '0px';
+				answer.style.opacity = '0';
+				answer.style.overflow = 'hidden';
+				answer.style.paddingTop = '0px';
+				answer.style.paddingBottom = '0px';
+				answer.style.transition = 'height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, padding 0.35s ease';
+				
+				requestAnimationFrame(function() {
+					answer.style.height = autoHeight + 'px';
+					answer.style.opacity = '1';
+					answer.style.paddingTop = '1.3rem';
+					answer.style.paddingBottom = '1.3rem';
+				});
+				
+				setTimeout(function() {
+					answer.style.removeProperty('height');
+					answer.style.removeProperty('overflow');
+					answer.style.removeProperty('transition');
+					answer.style.removeProperty('opacity');
+					answer.style.removeProperty('padding-top');
+					answer.style.removeProperty('padding-bottom');
+				}, 350);
+			}
+		});
+	});
+});
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>
