@@ -56,9 +56,9 @@ foreach ($urls_to_export as $path => $outfile) {
 
 	$rel_prefix = get_relative_prefix($outfile);
 
-	// Replace localhost URLs with GitHub Pages compatible paths
-	$html = str_replace($base_url . '/', $rel_prefix, $html);
-	$html = str_replace($base_url, $rel_prefix, $html);
+	// Replace localhost URLs with GitHub Pages compatible repository base paths
+	$html = str_replace($base_url . '/', '/wp-astrologer/', $html);
+	$html = str_replace($base_url, '/wp-astrologer', $html);
 	
 	// Ensure contact form submit action doesn't try to submit to #
 	$html = str_replace('action="#"', 'action="javascript:void(0);"', $html);
