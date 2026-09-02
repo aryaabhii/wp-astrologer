@@ -1,0 +1,2 @@
+# Ignore generated static site build
+/dist/
