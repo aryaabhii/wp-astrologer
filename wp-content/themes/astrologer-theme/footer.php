@@ -166,52 +166,66 @@ document.addEventListener('DOMContentLoaded', function() {
 			var details = summary.parentElement;
 			var answer = details.querySelector('.faq-answer');
 			
+			if (details.dataset.animating === 'true') return;
+			details.dataset.animating = 'true';
+			
 			if (details.hasAttribute('open')) {
-				answer.style.height = answer.offsetHeight + 'px';
+				// --- SMOOTH CLOSE ANIMATION ---
+				var currentHeight = answer.scrollHeight;
+				answer.style.height = currentHeight + 'px';
+				answer.style.opacity = '1';
 				answer.style.overflow = 'hidden';
-				answer.style.transition = 'height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.35s ease';
+				answer.style.transition = 'height 0.38s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.35s ease';
 				
-				requestAnimationFrame(function() {
-					answer.style.height = '0px';
-					answer.style.opacity = '0';
-					answer.style.paddingTop = '0px';
-					answer.style.paddingBottom = '0px';
-				});
+				answer.getBoundingClientRect(); // Force reflow
+				
+				answer.style.height = '0px';
+				answer.style.opacity = '0';
+				answer.style.paddingTop = '0px';
+				answer.style.paddingBottom = '0px';
 				
 				setTimeout(function() {
 					details.removeAttribute('open');
 					answer.style.removeProperty('height');
+					answer.style.removeProperty('opacity');
 					answer.style.removeProperty('overflow');
 					answer.style.removeProperty('transition');
-					answer.style.removeProperty('opacity');
 					answer.style.removeProperty('padding-top');
 					answer.style.removeProperty('padding-bottom');
-				}, 350);
+					delete details.dataset.animating;
+				}, 380);
 			} else {
+				// --- SMOOTH OPEN ANIMATION ---
 				details.setAttribute('open', '');
-				var autoHeight = answer.offsetHeight;
+				
+				answer.style.height = 'auto';
+				answer.style.paddingTop = '1.3rem';
+				answer.style.paddingBottom = '1.3rem';
+				var targetHeight = answer.scrollHeight;
+				
 				answer.style.height = '0px';
 				answer.style.opacity = '0';
-				answer.style.overflow = 'hidden';
 				answer.style.paddingTop = '0px';
 				answer.style.paddingBottom = '0px';
-				answer.style.transition = 'height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, padding 0.35s ease';
+				answer.style.overflow = 'hidden';
+				answer.style.transition = 'height 0.38s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, padding 0.35s ease';
 				
-				requestAnimationFrame(function() {
-					answer.style.height = autoHeight + 'px';
-					answer.style.opacity = '1';
-					answer.style.paddingTop = '1.3rem';
-					answer.style.paddingBottom = '1.3rem';
-				});
+				answer.getBoundingClientRect(); // Force reflow so 0px is registered
+				
+				answer.style.height = targetHeight + 'px';
+				answer.style.opacity = '1';
+				answer.style.paddingTop = '1.3rem';
+				answer.style.paddingBottom = '1.3rem';
 				
 				setTimeout(function() {
 					answer.style.removeProperty('height');
+					answer.style.removeProperty('opacity');
 					answer.style.removeProperty('overflow');
 					answer.style.removeProperty('transition');
-					answer.style.removeProperty('opacity');
 					answer.style.removeProperty('padding-top');
 					answer.style.removeProperty('padding-bottom');
-				}, 350);
+					delete details.dataset.animating;
+				}, 380);
 			}
 		});
 	});
