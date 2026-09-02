@@ -1,0 +1,163 @@
+<?php
+$astro_name     = get_theme_mod( 'astrologer_name', 'Raghu Sharma' );
+$astro_phone    = get_theme_mod( 'astrologer_phone', '+61 400 000 000' );
+$astro_wa       = get_theme_mod( 'astrologer_whatsapp', '61400000000' );
+$astro_addr     = get_theme_mod( 'astrologer_address', 'Adelaide CBD & All Suburbs, SA 5000' );
+$astro_email    = get_theme_mod( 'astrologer_email', 'info@astrologerraghusharma.com.au' );
+$astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
+?>
+<footer class="site-footer">
+	<div class="container">
+		<div class="footer-grid">
+			<!-- BRAND COLUMN -->
+			<div class="footer-brand">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer-logo">
+					<i class="fa-solid fa-om text-gold" style="font-size: 1.6rem;"></i>
+					<span class="font-serif">Raghu<span class="text-gold">Sharma</span></span>
+				</a>
+				<p class="footer-desc">
+					Adelaide’s premier Indian Astrologer, Psychic Reader & Spiritual Healer. Acharya <?php echo esc_html( $astro_name ); ?> brings decades of sacred Vedic lineage to resolve love challenges, eliminate negative energies, and guide you towards lasting prosperity across South Australia.
+				</p>
+				<div class="footer-social-strip">
+					<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="f-social-btn" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+					<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="f-social-btn f-wa" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+					<a href="<?php echo home_url('/contact-us/'); ?>" class="f-social-btn" title="Location"><i class="fa-solid fa-location-dot"></i></a>
+					<a href="mailto:<?php echo esc_attr( $astro_email ); ?>" class="f-social-btn" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+				</div>
+			</div>
+
+			<!-- COLUMN 1: SERVICES -->
+			<div class="footer-col">
+				<h4 class="footer-heading font-serif">Key Services Adelaide</h4>
+				<ul class="footer-links">
+					<li><a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Black Magic Removal</a></li>
+					<li><a href="<?php echo home_url('/negative-energy-removal-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Negative Energy Removal</a></li>
+					<li><a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Get Your Ex Love Back</a></li>
+					<li><a href="<?php echo home_url('/love-problem-solution-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Love Problem Solution</a></li>
+					<li><a href="<?php echo home_url('/vashikaran-specialist-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Vashikaran Specialist</a></li>
+					<li><a href="<?php echo home_url('/marriage-relationship-problems-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Marriage Problems</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 2: READINGS -->
+			<div class="footer-col">
+				<h4 class="footer-heading font-serif">Spiritual Readings</h4>
+				<ul class="footer-links">
+					<li><a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Psychic Reading</a></li>
+					<li><a href="<?php echo home_url('/tarot-card-reading-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Tarot Card Reading</a></li>
+					<li><a href="<?php echo home_url('/palm-reading-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Palm Reading</a></li>
+					<li><a href="<?php echo home_url('/horoscope-astrology-reading-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Horoscope & Astrology</a></li>
+					<li><a href="<?php echo home_url('/spiritual-healing-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Spiritual Healing</a></li>
+					<li><a href="<?php echo home_url('/pooja-spiritual-services-adelaide/'); ?>"><i class="fa-solid fa-chevron-right f-arrow"></i> Pooja & Hawan Services</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 3: CONTACT -->
+			<div class="footer-col">
+				<h4 class="footer-heading font-serif">Adelaide Sanctuary</h4>
+				<div class="footer-contact-info">
+					<p class="f-contact-item">
+						<i class="fa-solid fa-location-dot text-gold"></i>
+						<span><?php echo esc_html( $astro_addr ); ?></span>
+					</p>
+					<p class="f-contact-item">
+						<i class="fa-solid fa-phone text-gold"></i>
+						<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>"><?php echo esc_html( $astro_phone ); ?></a>
+					</p>
+					<p class="f-contact-item">
+						<i class="fa-brands fa-whatsapp text-whatsapp"></i>
+						<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="text-whatsapp">Chat on WhatsApp</a>
+					</p>
+				</div>
+				<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold f-cta-btn">
+					<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_name ); ?>
+				</a>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>&copy; <?php echo date('Y'); ?> <?php echo esc_html( $astro_name ); ?> - Astrologer Adelaide. All Rights Reserved.</p>
+			<div class="footer-bottom-links">
+				<a href="<?php echo home_url('/privacy-policy/'); ?>">Privacy Policy</a>
+				<span class="f-sep">|</span>
+				<a href="<?php echo home_url('/terms-and-conditions/'); ?>">Terms &amp; Conditions</a>
+				<span class="f-sep">|</span>
+				<a href="<?php echo home_url('/disclaimer/'); ?>">Disclaimer</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Sticky Mobile Call / WhatsApp Bar -->
+<div class="sticky-mobile-bar">
+	<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="sticky-btn sticky-call">
+		<i class="fa-solid fa-phone"></i> Call Now
+	</a>
+	<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="sticky-btn sticky-whatsapp">
+		<i class="fa-brands fa-whatsapp"></i> WhatsApp
+	</a>
+</div>
+
+<!-- GLOBAL BOOK CONSULTATION MODAL -->
+<div id="bookingModal" class="booking-modal-overlay" aria-hidden="true">
+	<div class="booking-modal-dialog">
+		<button type="button" class="booking-modal-close" id="closeBookingModal" aria-label="Close modal">&times;</button>
+		
+		<div class="booking-modal-header">
+			<h3 class="font-serif modal-title">CONNECT WITH ASTROLOGER</h3>
+			<p class="modal-subtitle">Fill out the form below to get personalized astrological guidance from our experts.</p>
+		</div>
+
+		<form id="bookingConsultationForm" class="booking-modal-form" action="#" method="POST">
+			<div class="form-group">
+				<label for="modalFullName">Full Name</label>
+				<input type="text" id="modalFullName" name="full_name" placeholder="Your full name" required>
+			</div>
+
+			<div class="form-group">
+				<label for="modalPhoneNumber">Phone Number</label>
+				<input type="tel" id="modalPhoneNumber" name="phone_number" placeholder="+61 400 000 000" required>
+			</div>
+
+			<div class="form-group">
+				<label for="modalEmailAddress">Email Address</label>
+				<input type="email" id="modalEmailAddress" name="email" placeholder="your@email.com" required>
+			</div>
+
+			<div class="form-group">
+				<label for="modalServiceRequired">Service Required</label>
+				<select id="modalServiceRequired" name="service_required" required>
+					<option value="" disabled selected>Select a service</option>
+					<option value="Black Magic Removal Adelaide">Black Magic Removal Adelaide</option>
+					<option value="Get Your Ex Love Back Adelaide">Get Your Ex Love Back Adelaide</option>
+					<option value="Negative Energy Removal">Negative Energy Removal</option>
+					<option value="Love Problem Solution">Love Problem Solution</option>
+					<option value="Psychic Reading Adelaide">Psychic Reading Adelaide</option>
+					<option value="Tarot Card Reading">Tarot Card Reading</option>
+					<option value="Vashikaran Specialist Adelaide">Vashikaran Specialist Adelaide</option>
+					<option value="Marriage & Relationships">Marriage & Relationships</option>
+					<option value="Spiritual Healing Adelaide">Spiritual Healing Adelaide</option>
+					<option value="Palm Reading Adelaide">Palm Reading Adelaide</option>
+					<option value="Horoscope & Kundli Reading">Horoscope & Kundli Reading</option>
+					<option value="Pooja & Hawan Services">Pooja & Hawan Services</option>
+					<option value="Career & Business Guidance">Career & Business Guidance</option>
+					<option value="Court Case & Dispute Resolution">Court Case & Dispute Resolution</option>
+					<option value="General Spiritual Consultation">General Spiritual Consultation</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="modalMessage">Message</label>
+				<textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your spiritual or astrological needs..."></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-gold modal-submit-btn">
+				<i class="fa-solid fa-paper-plane"></i> Submit Enquiry
+			</button>
+		</form>
+	</div>
+</div>
+
+<?php wp_footer(); ?>
+</body>
+</html>

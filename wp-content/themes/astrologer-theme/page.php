@@ -1,0 +1,147 @@
+<?php
+/**
+ * Inner Service Page Template
+ *
+ * @package AstroVeda
+ */
+
+get_header();
+$theme_uri = get_template_directory_uri();
+$astro_name  = get_theme_mod( 'astrologer_name', 'Raghu Sharma' );
+$astro_phone = get_theme_mod( 'astrologer_phone', '+61 400 000 000' );
+$astro_wa    = get_theme_mod( 'astrologer_whatsapp', '61400000000' );
+$astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
+?>
+
+<!-- PAGE HERO BANNER -->
+<section class="page-hero-section" style="position: relative; padding-top: 130px; padding-bottom: 50px; background: linear-gradient(180deg, rgba(7,6,20,0.95) 0%, rgba(22,18,44,0.9) 100%); border-bottom: 1px solid var(--border-gold);">
+	<div class="container text-center" style="max-width: 900px;">
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs" style="color: var(--primary-gold); font-size: 0.85rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &nbsp;»&nbsp; 
+			<span style="color: var(--primary-gold);"><?php single_post_title(); ?></span>
+		</div>
+
+		<h1 class="font-serif text-gold" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem;">
+			<?php single_post_title(); ?>
+		</h1>
+
+		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 750px; margin: 0 auto 1.5rem auto;">
+			Trusted Indian Astrologer & Spiritual Specialist Serving Adelaide CBD, Prospect, Glenelg, Norwood & All SA Suburbs.
+		</p>
+
+		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
+				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
+			</a>
+			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-outline" style="border-color: #25D366; color: #25D366;">
+				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- MAIN 2-COLUMN CONTENT & SIDEBAR -->
+<section class="section" style="padding: 4rem 0;">
+	<div class="container">
+		<div class="page-layout-grid" style="display: grid; grid-template-columns: 1fr 340px; gap: 2.5rem; align-items: start;">
+			
+			<!-- MAIN CONTENT (LEFT) -->
+			<main class="page-main-content">
+				<?php
+				while ( have_posts() ) : the_post();
+					?>
+					<article class="glass-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+						<div class="entry-content" style="color: var(--text-main); line-height: 1.8; font-size: 1.05rem;">
+							<?php the_content(); ?>
+						</div>
+					</article>
+				<?php endwhile; ?>
+
+				<!-- ASTROLOGICAL ASSURANCE BANNER -->
+				<div class="glass-card" style="background: linear-gradient(135deg, rgba(229,184,73,0.12), rgba(157,78,221,0.15)); border: 1px solid var(--border-gold); padding: 2rem; border-radius: 20px; text-align: center; margin-top: 2rem;">
+					<h3 class="font-serif text-gold" style="font-size: 1.6rem; margin-bottom: 0.5rem;">
+						Need Immediate Spiritual Help in Adelaide?
+					</h3>
+					<p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+						Astrologer <?php echo esc_html( $astro_name ); ?> provides 100% private, fast, and permanent Vedic solutions for all your personal, love, and spiritual challenges.
+					</p>
+					<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+						<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
+							<i class="fa-solid fa-phone"></i> Call Now (+61 400 000 000)
+						</a>
+						<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-outline" style="border-color: #25D366; color: #25D366;">
+							<i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation
+						</a>
+					</div>
+				</div>
+			</main>
+
+			<!-- SIDEBAR (RIGHT) -->
+			<aside class="page-sidebar" style="display: flex; flex-direction: column; gap: 2rem;">
+				
+				<!-- SIDEBAR QUICK CONSULTATION FORM -->
+				<div class="glass-card" style="border: 1px solid var(--border-gold); padding: 1.75rem;">
+					<h3 class="font-serif text-gold" style="font-size: 1.3rem; margin-bottom: 0.5rem; text-align: center;">
+						🔮 Book Consultation
+					</h3>
+					<p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-bottom: 1.25rem;">
+						Direct private consultation with Astrologer <?php echo esc_html( $astro_name ); ?>
+					</p>
+
+					<form id="sidebarConsultForm">
+						<div class="form-group" style="margin-bottom: 1rem;">
+							<label style="font-size: 0.85rem;">Full Name</label>
+							<input type="text" class="form-input" placeholder="Your Name" required style="padding: 0.7rem 1rem;">
+						</div>
+						<div class="form-group" style="margin-bottom: 1rem;">
+							<label style="font-size: 0.85rem;">Phone / WhatsApp</label>
+							<input type="tel" class="form-input" placeholder="+61 4XX XXX XXX" required style="padding: 0.7rem 1rem;">
+						</div>
+						<div class="form-group" style="margin-bottom: 1.25rem;">
+							<label style="font-size: 0.85rem;">Your Location (Suburb)</label>
+							<input type="text" class="form-input" placeholder="e.g. Adelaide CBD, Prospect" required style="padding: 0.7rem 1rem;">
+						</div>
+						<button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; font-size: 0.9rem;">
+							<i class="fa-solid fa-paper-plane"></i> Submit Request
+						</button>
+					</form>
+				</div>
+
+				<!-- ALL SERVICES NAVIGATION -->
+				<div class="glass-card" style="padding: 1.75rem;">
+					<h3 class="font-serif text-gold" style="font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+						🌟 All Adelaide Services
+					</h3>
+					<ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; padding: 0;">
+						<li><a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Black Magic Removal</a></li>
+						<li><a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Get Your Ex Love Back</a></li>
+						<li><a href="<?php echo home_url('/negative-energy-removal-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Negative Energy Removal</a></li>
+						<li><a href="<?php echo home_url('/love-problem-solution-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Love Problem Solution</a></li>
+						<li><a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Psychic Reading Adelaide</a></li>
+						<li><a href="<?php echo home_url('/tarot-card-reading-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Tarot Card Reading</a></li>
+						<li><a href="<?php echo home_url('/vashikaran-specialist-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Vashikaran Specialist</a></li>
+						<li><a href="<?php echo home_url('/spiritual-healing-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Spiritual Healing</a></li>
+						<li><a href="<?php echo home_url('/palm-reading-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Palm Reading Adelaide</a></li>
+						<li><a href="<?php echo home_url('/horoscope-astrology-reading-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Horoscope & Astrology</a></li>
+						<li><a href="<?php echo home_url('/marriage-relationship-problems-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Marriage Problems</a></li>
+						<li><a href="<?php echo home_url('/pooja-spiritual-services-adelaide/'); ?>" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: var(--transition);"><i class="fa-solid fa-chevron-right" style="color: var(--primary-gold); font-size: 0.75rem;"></i> Pooja & Hawan Services</a></li>
+					</ul>
+				</div>
+
+				<!-- CONFIDENTIALITY BADGE -->
+				<div class="glass-card" style="text-align: center; padding: 1.5rem; border: 1px solid rgba(229,184,73,0.3);">
+					<i class="fa-solid fa-lock" style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 0.5rem;"></i>
+					<h4 class="font-serif text-gold" style="font-size: 1.1rem; margin-bottom: 0.4rem;">100% Privacy Guaranteed</h4>
+					<p style="font-size: 0.85rem; color: var(--text-muted);">
+						Your personal information and consultation details remain completely confidential.
+					</p>
+				</div>
+
+			</aside>
+		</div>
+	</div>
+</section>
+
+<?php
+get_footer();
