@@ -12,15 +12,15 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 ?>
 
 <!-- SERVICES HERO BANNER -->
-<section class="page-hero-section">
-	<div class="container text-center" style="max-width: 900px;">
-		<div class="breadcrumbs" style="color: var(--primary-gold); font-size: 0.85rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
-			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &nbsp;»&nbsp; <span>Services</span>
+<section class="page-hero-section section">
+	<div class="container" style="text-align: center; max-width: 900px;">
+		<div class="breadcrumbs" style="color: var(--text-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem;">
+			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &raquo; <span>Services</span>
 		</div>
-		<h1 class="font-serif text-gold" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem;">
+		<h1 class="font-serif" style="font-size: 2.8rem; margin-bottom: 1rem; color: #FFFFFF;">
 			Our Specialised <span class="text-gold">Astrology &amp; Spiritual Services</span>
 		</h1>
-		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 780px; margin: 0 auto 1.5rem auto; line-height: 1.7; text-align: justify; text-justify: inter-word;">
+		<p style="max-width: 780px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; text-align: justify; text-justify: inter-word;">
 			Acharya <?php echo esc_html($astro_name); ?> provides Adelaide’s most authentic Indian Astrology, Vashikaran, Black Magic Removal, and Psychic Reading solutions. Explore our 14 core spiritual remedies designed to eliminate dark energies, align your chakras, and restore love and prosperity.
 		</p>
 

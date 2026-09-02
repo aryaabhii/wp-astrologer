@@ -15,7 +15,7 @@ $profile_img    = get_template_directory_uri() . '/assets/images/astrologer-prof
 
 <!-- ABOUT HERO BANNER -->
 <section class="page-hero-section section">
-	<div class="container" style="text-align: center;">
+	<div class="container" style="text-align: center; max-width: 900px;">
 		<div class="breadcrumbs" style="color: var(--text-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem;">
 			<a href="<?php echo home_url('/'); ?>" style="color: var(--text-muted); text-decoration: none;">Home</a> &raquo; <span>About Acharya <?php echo esc_html($astro_name); ?></span>
 		</div>
