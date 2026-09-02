@@ -220,13 +220,6 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 				<p class="section-desc" style="color: var(--text-muted); font-size: 0.95rem;">Get clear answers about booking consultations, confidentiality, and appointment availability in Adelaide.</p>
 			</div>
 
-			<!-- FAQ METRICS CHIPS -->
-			<div style="display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 2.5rem; flex-wrap: wrap;">
-				<span style="font-size: 0.85rem; background: rgba(229, 184, 73, 0.08); border: 1px solid rgba(229, 184, 73, 0.25); padding: 0.45rem 1.1rem; border-radius: 50px; color: var(--text-gold);"><i class="fa-solid fa-bolt text-gold"></i> 15-Min Response</span>
-				<span style="font-size: 0.85rem; background: rgba(229, 184, 73, 0.08); border: 1px solid rgba(229, 184, 73, 0.25); padding: 0.45rem 1.1rem; border-radius: 50px; color: var(--text-gold);"><i class="fa-solid fa-user-shield text-gold"></i> 100% Confidential</span>
-				<span style="font-size: 0.85rem; background: rgba(229, 184, 73, 0.08); border: 1px solid rgba(229, 184, 73, 0.25); padding: 0.45rem 1.1rem; border-radius: 50px; color: var(--text-gold);"><i class="fa-solid fa-award text-gold"></i> 25+ Yrs Wisdom</span>
-			</div>
-
 			<div class="faq-grid">
 				<!-- 1 -->
 				<div class="faq-item">
