@@ -26,18 +26,9 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 			<?php single_post_title(); ?>
 		</h1>
 
-		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 750px; margin: 0 auto 1.5rem auto; text-align: justify; text-justify: inter-word;">
+		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 750px; margin: 0 auto; text-align: justify; text-justify: inter-word;">
 			Trusted Indian Astrologer &amp; Spiritual Specialist Serving Adelaide CBD, Prospect, Glenelg, Norwood &amp; All SA Suburbs.
 		</p>
-
-		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
-				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
-			</a>
-			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
-				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-			</a>
-		</div>
 	</div>
 </section>
 

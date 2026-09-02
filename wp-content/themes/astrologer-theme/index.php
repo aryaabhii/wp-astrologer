@@ -21,17 +21,9 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 		<h1 class="font-serif text-gold" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem;">
 			Astrology <span class="text-gold">Insights &amp; Blog</span>
 		</h1>
-		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 780px; margin: 0 auto 1.5rem auto; line-height: 1.7; text-align: justify; text-justify: inter-word;">
+		<p style="color: var(--text-muted); font-size: 1.1rem; max-width: 780px; margin: 0 auto; line-height: 1.7; text-align: justify; text-justify: inter-word;">
 			Celestial wisdom, horoscope news, planetary transits, and Vedic remedy guides by Astrologer Raghu Sharma in Adelaide.
 		</p>
-		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
-				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
-			</a>
-			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
-				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-			</a>
-		</div>
 	</div>
 </section>
 

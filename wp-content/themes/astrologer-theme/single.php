@@ -22,17 +22,9 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 		<h1 class="font-serif text-gold" style="font-size: 2.6rem; line-height: 1.2; margin-bottom: 1rem;">
 			<?php single_post_title(); ?>
 		</h1>
-		<div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+		<div style="font-size: 0.9rem; color: var(--text-muted);">
 			<span><i class="fa-regular fa-calendar text-gold"></i> <?php echo get_the_date(); ?></span> &nbsp;&bull;&nbsp; 
 			<span><i class="fa-regular fa-user text-gold"></i> By <?php the_author(); ?></span>
-		</div>
-		<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-			<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold">
-				<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
-			</a>
-			<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp" target="_blank">
-				<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-			</a>
 		</div>
 	</div>
 </section>
