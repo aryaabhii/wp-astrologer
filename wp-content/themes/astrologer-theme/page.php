@@ -81,23 +81,23 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 
 					<form id="sidebarConsultForm" class="astrologer-consult-form" action="#" method="POST">
 						<div class="form-group">
-							<label for="sidebarFullName">Full Name</label>
-							<input type="text" id="sidebarFullName" name="full_name" placeholder="Your full name" required>
+							<label for="sidebarFullName"><i class="fa-solid fa-user text-gold"></i> Full Name</label>
+							<input type="text" id="sidebarFullName" name="full_name" class="form-input" placeholder="Your full name" required>
 						</div>
 
 						<div class="form-group">
-							<label for="sidebarPhoneNumber">Phone Number</label>
-							<input type="tel" id="sidebarPhoneNumber" name="phone_number" placeholder="+61 400 000 000" required>
+							<label for="sidebarPhoneNumber"><i class="fa-solid fa-phone text-gold"></i> Phone Number</label>
+							<input type="tel" id="sidebarPhoneNumber" name="phone_number" class="form-input" placeholder="+61 400 000 000" required>
 						</div>
 
 						<div class="form-group">
-							<label for="sidebarEmailAddress">Email Address</label>
-							<input type="email" id="sidebarEmailAddress" name="email" placeholder="your@email.com" required>
+							<label for="sidebarEmailAddress"><i class="fa-solid fa-envelope text-gold"></i> Email Address</label>
+							<input type="email" id="sidebarEmailAddress" name="email" class="form-input" placeholder="your@email.com" required>
 						</div>
 
 						<div class="form-group">
-							<label for="sidebarServiceRequired">Service Required</label>
-							<select id="sidebarServiceRequired" name="service_required" required>
+							<label for="sidebarServiceRequired"><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> Service Required</label>
+							<select id="sidebarServiceRequired" name="service_required" class="form-input" required>
 								<option value="" disabled selected>Select a service</option>
 								<option value="Black Magic Removal Adelaide">Black Magic Removal Adelaide</option>
 								<option value="Get Your Ex Love Back Adelaide">Get Your Ex Love Back Adelaide</option>
@@ -118,8 +118,8 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 						</div>
 
 						<div class="form-group">
-							<label for="sidebarMessage">Message</label>
-							<textarea id="sidebarMessage" name="message" rows="3" placeholder="Tell us about your needs..."></textarea>
+							<label for="sidebarMessage"><i class="fa-solid fa-comment-dots text-gold"></i> Message</label>
+							<textarea id="sidebarMessage" name="message" class="form-input" rows="3" placeholder="Tell us about your needs..."></textarea>
 						</div>
 
 						<button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 0.5rem; font-size: 0.95rem; border-radius: 50px;">

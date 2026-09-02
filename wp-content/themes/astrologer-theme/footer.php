@@ -108,25 +108,25 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 			<p class="modal-subtitle">Fill out the form below to get personalized astrological guidance from our experts.</p>
 		</div>
 
-		<form id="bookingConsultationForm" class="booking-modal-form" action="#" method="POST">
+		<form id="bookingConsultationForm" class="booking-modal-form astrologer-consult-form" action="#" method="POST">
 			<div class="form-group">
-				<label for="modalFullName">Full Name</label>
-				<input type="text" id="modalFullName" name="full_name" placeholder="Your full name" required>
+				<label for="modalFullName"><i class="fa-solid fa-user text-gold"></i> Full Name</label>
+				<input type="text" id="modalFullName" name="full_name" class="form-input" placeholder="Your full name" required>
 			</div>
 
 			<div class="form-group">
-				<label for="modalPhoneNumber">Phone Number</label>
-				<input type="tel" id="modalPhoneNumber" name="phone_number" placeholder="+61 400 000 000" required>
+				<label for="modalPhoneNumber"><i class="fa-solid fa-phone text-gold"></i> Phone Number</label>
+				<input type="tel" id="modalPhoneNumber" name="phone_number" class="form-input" placeholder="+61 400 000 000" required>
 			</div>
 
 			<div class="form-group">
-				<label for="modalEmailAddress">Email Address</label>
-				<input type="email" id="modalEmailAddress" name="email" placeholder="your@email.com" required>
+				<label for="modalEmailAddress"><i class="fa-solid fa-envelope text-gold"></i> Email Address</label>
+				<input type="email" id="modalEmailAddress" name="email" class="form-input" placeholder="your@email.com" required>
 			</div>
 
 			<div class="form-group">
-				<label for="modalServiceRequired">Service Required</label>
-				<select id="modalServiceRequired" name="service_required" required>
+				<label for="modalServiceRequired"><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> Service Required</label>
+				<select id="modalServiceRequired" name="service_required" class="form-input" required>
 					<option value="" disabled selected>Select a service</option>
 					<option value="Black Magic Removal Adelaide">Black Magic Removal Adelaide</option>
 					<option value="Get Your Ex Love Back Adelaide">Get Your Ex Love Back Adelaide</option>
@@ -147,8 +147,8 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 			</div>
 
 			<div class="form-group">
-				<label for="modalMessage">Message</label>
-				<textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your spiritual or astrological needs..."></textarea>
+				<label for="modalMessage"><i class="fa-solid fa-comment-dots text-gold"></i> Message</label>
+				<textarea id="modalMessage" name="message" class="form-input" rows="3" placeholder="Tell us about your needs..."></textarea>
 			</div>
 
 			<button type="submit" class="btn btn-gold modal-submit-btn">
