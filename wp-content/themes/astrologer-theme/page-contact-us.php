@@ -129,26 +129,6 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 						</div>
 					</div>
 				</div>
-
-				<!-- SUBURBS LIST BADGES CARD -->
-				<div class="glass-card" style="padding: 1.75rem; border-radius: 20px;">
-					<h3 class="font-serif text-gold" style="font-size: 1.15rem; margin-bottom: 0.8rem;">
-						<i class="fa-solid fa-map-pin text-gold" style="margin-right: 0.4rem;"></i> Serving All South Australia Suburbs
-					</h3>
-					<div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Adelaide CBD</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Prospect</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Glenelg</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Norwood</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Salisbury</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Marion</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Mawson Lakes</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Port Adelaide</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Burnside</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Golden Grove</span>
-						<span style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.8rem; color: var(--text-muted);">Tea Tree Gully</span>
-					</div>
-				</div>
 			</div>
 
 			<!-- RIGHT COLUMN: STANDARDIZED CONSULTATION FORM -->
