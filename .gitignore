@@ -1,2 +1,1 @@
-# Ignore generated static site build
-/dist/
+# Keep dist tracked for GitHub Pages
