@@ -65,7 +65,7 @@
 <?php wp_body_open(); ?>
 
 <header class="site-header">
-
+	<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
 
 	<div class="container header-container">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
@@ -86,14 +86,40 @@
 				<ul class="nav-menu">
 					<li><a href="<?php echo home_url('/'); ?>">Home</a></li>
 					<li><a href="<?php echo home_url('/about-raghu-sharma/'); ?>">About</a></li>
-					<li><a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>">Black Magic Removal</a></li>
-					<li><a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>">Get Ex Back</a></li>
-					<li><a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>">Psychic Reading</a></li>
+					<li class="menu-item-has-children">
+						<a href="<?php echo home_url('/services/'); ?>">Services <i class="fa-solid fa-chevron-down submenu-icon"></i></a>
+						<ul class="sub-menu">
+							<li><a href="<?php echo home_url('/black-magic-removal-adelaide/'); ?>">Black Magic Removal</a></li>
+							<li><a href="<?php echo home_url('/negative-energy-removal-adelaide/'); ?>">Negative Energy Removal</a></li>
+							<li><a href="<?php echo home_url('/get-your-ex-love-back-adelaide/'); ?>">Get Ex Back</a></li>
+							<li><a href="<?php echo home_url('/love-problem-solution-adelaide/'); ?>">Love Problem Solution</a></li>
+							<li><a href="<?php echo home_url('/vashikaran-specialist-adelaide/'); ?>">Vashikaran Specialist</a></li>
+							<li><a href="<?php echo home_url('/marriage-relationship-problems-adelaide/'); ?>">Marriage Problems</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<a href="<?php echo home_url('/services/'); ?>">Readings <i class="fa-solid fa-chevron-down submenu-icon"></i></a>
+						<ul class="sub-menu">
+							<li><a href="<?php echo home_url('/psychic-reading-adelaide/'); ?>">Psychic Reading</a></li>
+							<li><a href="<?php echo home_url('/tarot-card-reading-adelaide/'); ?>">Tarot Card Reading</a></li>
+							<li><a href="<?php echo home_url('/palm-reading-adelaide/'); ?>">Palm Reading</a></li>
+							<li><a href="<?php echo home_url('/horoscope-astrology-reading-adelaide/'); ?>">Horoscope &amp; Kundli</a></li>
+							<li><a href="<?php echo home_url('/spiritual-healing-adelaide/'); ?>">Spiritual Healing</a></li>
+						</ul>
+					</li>
 					<li><a href="<?php echo home_url('/contact-us/'); ?>">Contact</a></li>
 				</ul>
 				<?php
 			}
 			?>
+			<div class="mobile-nav-actions">
+				<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold mobile-nav-btn">
+					<i class="fa-solid fa-phone"></i> Call <?php echo esc_html( $astro_phone ); ?>
+				</a>
+				<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="btn btn-whatsapp mobile-nav-btn" target="_blank">
+					<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+				</a>
+			</div>
 		</nav>
 
 		<div class="header-actions">

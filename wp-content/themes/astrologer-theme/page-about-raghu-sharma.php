@@ -31,7 +31,7 @@ $profile_img    = get_template_directory_uri() . '/assets/images/astrologer-prof
 <!-- MAIN BIOGRAPHY SECTION -->
 <section class="section" style="padding-top: 1rem;">
 	<div class="container">
-		<div style="display: grid; grid-template-columns: 360px 1fr; gap: 3rem; align-items: start;">
+		<div class="about-page-grid">
 			
 			<!-- LEFT COLUMN: PROFILE CARD & PRIVACY GUARANTEE -->
 			<div style="display: flex; flex-direction: column; gap: 1.8rem;">

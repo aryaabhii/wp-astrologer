@@ -34,7 +34,7 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 <!-- MAIN 2-COLUMN CONTENT & SIDEBAR -->
 <section class="section" style="padding: 3rem 0;">
 	<div class="container">
-		<div class="page-layout-grid" style="display: grid; grid-template-columns: 1fr 340px; gap: 2.5rem; align-items: start;">
+		<div class="page-layout-grid">
 			
 			<!-- MAIN CONTENT (LEFT) -->
 			<main class="page-main-content">

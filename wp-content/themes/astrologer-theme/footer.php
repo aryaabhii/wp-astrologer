@@ -53,7 +53,7 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 			</div>
 
 			<!-- COLUMN 3: CONTACT -->
-			<div class="footer-col">
+			<div class="footer-col footer-contact-col">
 				<h4 class="footer-heading font-serif">Adelaide Sanctuary</h4>
 				<div class="footer-contact-info">
 					<p class="f-contact-item">
@@ -66,7 +66,7 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 					</p>
 					<p class="f-contact-item">
 						<i class="fa-brands fa-whatsapp text-whatsapp"></i>
-						<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="text-whatsapp">Chat on WhatsApp</a>
+						<a href="https://wa.me/<?php echo esc_attr( $astro_wa ); ?>" class="text-whatsapp" target="_blank">Chat on WhatsApp</a>
 					</p>
 				</div>
 				<a href="tel:<?php echo esc_attr( $astro_phone_clean ); ?>" class="btn btn-gold f-cta-btn">
@@ -87,6 +87,11 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 		</div>
 	</div>
 </footer>
+
+<!-- Back to Top Floating Button -->
+<button id="backToTop" class="back-to-top-btn" aria-label="Back to top">
+	<i class="fa-solid fa-chevron-up"></i>
+</button>
 
 <!-- Sticky Mobile Call / WhatsApp Bar -->
 <div class="sticky-mobile-bar">

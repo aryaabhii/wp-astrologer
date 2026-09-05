@@ -54,8 +54,8 @@ function astroveda_scripts() {
 	// Theme Main Stylesheet (with automatic cache busting)
 	wp_enqueue_style( 'astroveda-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
-	// Main JavaScript
-	wp_enqueue_script( 'astroveda-js', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true );
+	// Main JavaScript (with automatic cache busting)
+	wp_enqueue_script( 'astroveda-js', get_template_directory_uri() . '/assets/js/main.js', array(), filemtime( get_template_directory() . '/assets/js/main.js' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'astroveda_scripts' );
 

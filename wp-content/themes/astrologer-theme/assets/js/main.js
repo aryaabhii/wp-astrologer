@@ -14,40 +14,144 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const mobileToggle = document.getElementById('mobileMenuToggle');
   const mainNav = document.getElementById('mainNav');
+  const mobileBackdrop = document.getElementById('mobileMenuBackdrop');
+
+  function openMobileDrawer() {
+    if (mainNav) mainNav.classList.add('active');
+    if (mobileBackdrop) mobileBackdrop.classList.add('active');
+    document.body.classList.add('modal-open');
+    if (mobileToggle) {
+      const icon = mobileToggle.querySelector('i');
+      if (icon) icon.className = 'fa-solid fa-xmark';
+    }
+  }
+
+  function closeMobileDrawer() {
+    if (mainNav) mainNav.classList.remove('active');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    if (mobileToggle) {
+      const icon = mobileToggle.querySelector('i');
+      if (icon) icon.className = 'fa-solid fa-bars';
+    }
+  }
 
   if (mobileToggle && mainNav) {
     mobileToggle.addEventListener('click', function(e) {
       e.stopPropagation();
-      mainNav.classList.toggle('active');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) {
-        if (mainNav.classList.contains('active')) {
-          icon.className = 'fa-solid fa-xmark';
-        } else {
-          icon.className = 'fa-solid fa-bars';
-        }
+      if (mainNav.classList.contains('active')) {
+        closeMobileDrawer();
+      } else {
+        openMobileDrawer();
       }
     });
 
-    // Close menu when clicking nav link
-    const navLinks = mainNav.querySelectorAll('a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mainNav.classList.remove('active');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) icon.className = 'fa-solid fa-bars';
-      });
-    });
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener('click', closeMobileDrawer);
+    }
 
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-      if (!mainNav.contains(e.target) && !mobileToggle.contains(e.target)) {
-        mainNav.classList.remove('active');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) icon.className = 'fa-solid fa-bars';
+      if (mainNav.classList.contains('active') && !mainNav.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMobileDrawer();
       }
     });
   }
+
+  // Clean duplicate literal unicode arrow characters from menu link labels
+  function stripLiteralMenuArrows(element) {
+    if (!element) return;
+    // Remove inline chevron icons temporarily to clean text, then restore single icon
+    const existingIcon = element.querySelector('.submenu-icon');
+    let html = element.innerHTML.replace(/[▾▼▴▲]/g, '').trim();
+    element.innerHTML = html;
+    if (existingIcon) {
+      element.appendChild(existingIcon);
+    }
+  }
+
+  // Universal Mobile Click-to-Open Sub-menu Handler
+  function initMobileSubmenuIcons() {
+    const allNavLis = document.querySelectorAll('.nav-menu li');
+    allNavLis.forEach(li => {
+      const subUl = li.querySelector('ul');
+      if (subUl) {
+        li.classList.add('has-sub');
+        const parentLink = li.querySelector(':scope > a');
+        if (parentLink) {
+          // Clean literal text arrows from label (e.g. "Services ▾" -> "Services")
+          stripLiteralMenuArrows(parentLink);
+
+          // Ensure exactly ONE chevron icon indicator exists on the far right
+          let icon = parentLink.querySelector('.submenu-icon');
+          if (!icon) {
+            // Remove any extra icons
+            const oldIcons = parentLink.querySelectorAll('i');
+            oldIcons.forEach(i => i.remove());
+
+            icon = document.createElement('i');
+            icon.className = 'fa-solid fa-chevron-down submenu-icon';
+            parentLink.appendChild(icon);
+          }
+        }
+      }
+    });
+  }
+  initMobileSubmenuIcons();
+
+  // Capture-phase event listener to guarantee interception before page navigation
+  document.addEventListener('click', function(e) {
+    const isMobile = window.innerWidth <= 992 || window.matchMedia('(max-width: 992px)').matches;
+    if (!isMobile) return;
+
+    // Find if clicked element is part of a parent nav link
+    const parentLink = e.target.closest('.nav-menu li > a');
+    if (!parentLink) return;
+
+    const parentLi = parentLink.parentElement;
+    if (!parentLi) return;
+
+    const subUl = parentLi.querySelector(':scope > ul, :scope > .sub-menu, :scope > .children');
+
+    // If this LI has a sub-menu and click is NOT inside a child link of the sub-menu:
+    if (subUl && !e.target.closest('.sub-menu a, .children a, ul ul a')) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isAlreadyOpen = parentLi.classList.contains('submenu-open');
+
+      // Accordion effect: close all other open submenus
+      const allNavLis = document.querySelectorAll('.nav-menu li');
+      allNavLis.forEach(otherLi => {
+        if (otherLi !== parentLi) {
+          otherLi.classList.remove('submenu-open');
+          const otherSub = otherLi.querySelector(':scope > ul, :scope > .sub-menu, :scope > .children');
+          if (otherSub) {
+            otherSub.style.removeProperty('display');
+          }
+          const otherIcon = otherLi.querySelector('.submenu-icon, i');
+          if (otherIcon) {
+            otherIcon.className = 'fa-solid fa-chevron-down submenu-icon';
+          }
+        }
+      });
+
+      const currentIcon = parentLink.querySelector('.submenu-icon, i');
+
+      if (isAlreadyOpen) {
+        parentLi.classList.remove('submenu-open');
+        subUl.style.removeProperty('display');
+        if (currentIcon) currentIcon.className = 'fa-solid fa-chevron-down submenu-icon';
+      } else {
+        parentLi.classList.add('submenu-open');
+        subUl.style.removeProperty('display');
+        if (currentIcon) currentIcon.className = 'fa-solid fa-chevron-up submenu-icon';
+      }
+    } else if (!subUl) {
+      // Leaf link click -> close mobile menu drawer
+      closeMobileDrawer();
+    }
+  }, true);
 
   // Highlight Active Nav Link based on Current URL Path
   const currentPath = window.location.pathname.replace(/\/$/, "");
@@ -573,6 +677,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         closeModal();
       }, 1000);
+    });
+  }
+
+  /* -------------------------------------------------------------
+   * 9. Back to Top Floating Button Scroll Handler
+   * ------------------------------------------------------------- */
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   }
 

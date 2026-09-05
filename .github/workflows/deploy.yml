@@ -32,3 +32,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
+
+
+          # as our site is astrologer now this is too much dark colored theme so make it little bit ligth and this site is not complete responsive in phone not opening corredclty fix thi as well
+
+
+          

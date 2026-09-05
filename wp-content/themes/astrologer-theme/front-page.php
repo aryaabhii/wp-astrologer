@@ -70,7 +70,7 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 </section>
 
 <!-- ABOUT ASTROLOGER SECTION -->
-<section id="about" class="section" style="background: rgba(13, 10, 29, 0.5);">
+<section id="about" class="section" style="background: rgba(30, 24, 66, 0.5);">
 	<div class="container">
 		<div class="about-grid">
 			<div class="about-img-wrapper">

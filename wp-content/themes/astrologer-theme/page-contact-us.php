@@ -35,7 +35,7 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 	<div class="container">
 
 		<!-- 3 QUICK ACTION HIGHLIGHT CARDS -->
-		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+		<div class="contact-cards-grid">
 			
 			<!-- Card 1: Call -->
 			<div class="glass-card" style="padding: 2rem; border: 1px solid var(--border-gold); border-radius: 16px; text-align: center; transition: transform 0.3s ease;">
@@ -76,7 +76,7 @@ $astro_phone_clean = preg_replace( '/[^0-9+]/', '', $astro_phone );
 		</div>
 
 		<!-- MAIN 2-COLUMN GRID (DETAILS + FORM) -->
-		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: stretch;">
+		<div class="contact-page-grid">
 			
 			<!-- LEFT COLUMN: CONTACT DETAILS & ASSURANCES -->
 			<div style="display: flex; flex-direction: column;">
